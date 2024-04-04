@@ -41,16 +41,20 @@ public class StudentRepository {
 
     public Student findStudent(String student){
         // your code goes here
-//        Student v1;
-//        if(studentMap.containsKey(student)){
+
+       if(studentMap.containsKey(student)){
             return studentMap.get(student);
-//        }
-//        return v1;
+       }
+      return null;
     }
 
     public Teacher findTeacher(String teacher){
         // your code goes here
-        return teacherMap.get(teacher);
+
+        if(teacherMap.containsKey(teacher)){
+            return teacherMap.get(teacher);
+        }
+        return null;
     }
 
     public List<String> findStudentsFromTeacher(String teacher){
